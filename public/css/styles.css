@@ -1,0 +1,1000 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;500;600;700;800&family=PT+Serif:wght@400;700&family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+html {
+    font-size: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    letter-spacing: 0.1em;
+}
+
+a:hover {
+    color: #cce7f8;
+}
+
+.section-heading {
+    position: absolute;
+    left: 46%;
+    color: white;
+    font-family: 'montserrat';
+    font-size: 1.1em;
+    font-weight: 700;
+    top: 3%;
+}
+
+/*********************************************************************************************
+                                    HOME SECTION
+**********************************************************************************************/
+.home_bg {
+    background-image: url('/images/home.png');
+    height: 768px;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.navbar-top {
+    top: 0;
+    width: 100%;
+    height: 70px;
+    z-index: 1;
+    position: fixed;
+    background-color: #9dc6db;
+}
+
+nav #brand {
+    position: absolute;
+    line-height: 3.1;
+    left: 5%;
+}
+
+nav #brand a {
+    transition: all 0.3s ease-out;
+    font-weight: 700;
+    font-size: 1.2em;
+    font-family: 'ubuntu';
+}
+
+#menu {
+    padding-left: 0px;
+}
+
+nav #menu {
+    float: left;
+    left: 53%;
+    position: absolute;
+}
+
+nav #menu li {
+    display: inline-block;
+    padding: 0px 20px;
+    line-height: 3.5;
+    position: relative;
+    transition: all 0.3s ease-out;
+}
+
+nav #menu li a {
+    font-weight: 700;
+    font-size: 1.1em;
+    font-family: 'ubuntu';
+}
+
+#toggle {
+    position: absolute;
+    right: 3%;
+    top: 14px;
+    z-index: 999;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    float: right;
+    transition: all 0.3s ease-out;
+    visibility: hidden;
+    opacity: 0;
+}
+
+#toggle .span {
+    height: 3px;
+    background: white;
+    transition: all 0.3s ease-out;
+    backface-visibility: hidden;
+    margin: 5px auto;
+}
+
+#toggle.on #one {
+    transform: rotate(45deg) translateX(2px) translateY(4px);
+}
+
+#toggle.on #two {
+    opacity: 0;
+}
+
+#toggle.on #three {
+    transform: rotate(-45deg) translateX(8px) translateY(-10px);
+}
+
+#resize {
+    z-index: 1;
+    top: 100%;
+    position: absolute;
+    background: #000;
+    width: 85%;
+    margin-left: 7%;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 1s ease-out;
+    display: table;
+    vertical-align: center;
+    box-shadow: 3px 4px 2px 2px black;
+}
+
+#resize #menu li {
+    display: block;
+    text-align: center;
+    padding: 25px 0;
+    min-height: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+}
+
+#resize li:nth-child(1) {
+    margin-top: 80px;
+}
+
+#resize.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.home-heading {
+    position: absolute;
+    top: 40%;
+    left: 15%;
+    font-family: cursive;
+    font-weight: 700;
+    color: white;
+    font-size: 1.5em;
+    letter-spacing: 3px;
+}
+
+.home-essay {
+    position: absolute;
+    top: 46%;
+    left: 15%;
+    width: 65%;
+    line-height: 1.5;
+    font-family: 'Poppins';
+    font-weight: 700;
+    font-size: 2.6em;
+}
+
+.home-button {
+    position: absolute;
+    top: 72%;
+    left: 15%;
+    font-family: 'ubuntu';
+    font-weight: 400;
+}
+
+.home-btn {
+    margin-right: 20px;
+}
+
+@media all and (max-width: 1024px) {
+    #toggle {
+        visibility: visible;
+        opacity: 1;
+        margin-top: 6px;
+    }
+
+    nav #brand {
+        margin-left: 0px;
+        padding-left: 30px;
+        margin-top: 6px;
+    }
+
+    #menu a {
+        font-weight: 200;
+        font-size: 20px;
+    }
+
+    nav #menu {
+        display: none;
+    }
+
+    nav #brand a {
+        color: white;
+        font-size: 1.1em;
+    }
+
+    #resize a {
+        color: white;
+        font-family: cursive;
+        font-weight: 500;
+    }
+
+    #resize a:hover {
+        /* border-bottom: none; */
+        /* text-decoration: underline; */
+        color: #545454;
+    }
+
+    .home_bg {
+        padding: 0%;
+    }
+}
+
+@media all and (min-width: 1024px) and (max-width: 1230px) {
+    #resize {
+        visibility: hidden !important;
+    }
+
+    nav #menu {
+        left: 46%;
+    }
+}
+
+.wrapper .button {
+    display: block;
+    height: 50px;
+    width: 50px;
+    margin: 15px 0px;
+    overflow: hidden;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 6px 10px 6px 2px rgb(0 0 0 / 10%);
+    transition: all 0.3s ease-out;
+}
+
+.wrapper {
+    position: absolute;
+    left: 88%;
+    top: 35%;
+}
+
+.wrapper .button:hover {
+    width: 150px;
+}
+
+.wrapper .button .icon {
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    border-radius: 50px;
+    line-height: 60px;
+    transition: all 0.3s ease-out;
+}
+
+.wrapper .button:hover .icon {
+    background: black;
+}
+
+.wrapper .button .icon i {
+    font-size: 25px;
+    line-height: 50px;
+    transition: all 0.3s ease-out;
+    color: black;
+}
+
+.wrapper .button:hover .icon i {
+    color: white;
+}
+
+.wrapper .button span {
+    font-family: 'ubuntu', 'sans-serif';
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 50px;
+    margin-left: 10px;
+    transition: all 0.3s ease-out;
+}
+
+.wrapper .button span {
+    color: black;
+}
+
+/*********************************************************************************************
+                                    ABOUT SECTION
+**********************************************************************************************/
+.about_container {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+}
+
+@media all and (min-width: 660px) {
+    .about_bg {
+        background-image: url('/images/about.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 768px;
+        position: relative;
+    }
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding-top: 90px;
+}
+
+.about-img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    margin: 0px auto;
+}
+
+.about-story {
+    margin: 0px auto;
+    width: 62%;
+    line-height: 2.2;
+    letter-spacing: 0.02em;
+}
+
+.about-heading {
+    font-family: 'ubuntu', 'sans-serif';
+    font-size: 1.5em;
+    color: white;
+    text-align: left;
+    font-weight: 700;
+}
+
+.about-essay {
+    font-family: 'ubuntu';
+    color: black;
+}
+
+.about-portrait {
+    height: 80vh;
+}
+
+/*********************************************************************************************
+                                    SKILLS SECTION
+**********************************************************************************************/
+.skills_bg {
+    background-color: black;
+    position: relative;
+}
+
+.fa-arrow-trend-down {
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    color: #545454;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: 10% 45% 45%;
+    padding-top: 110px;
+    padding-bottom: 90px;
+    row-gap: 160px;
+}
+
+.skills-title {
+    left: 26%;
+    position: absolute;
+    top: 10%;
+    color: ghostwhite;
+    font-size: 1.4em;
+    font-family: 'montserrat';
+    font-weight: 700;
+}
+
+.item1 {
+    margin: auto;
+    color: #545454;
+}
+
+.item2 {
+    color: ghostwhite;
+    font-family: 'ubuntu', 'sans-serif';
+    font-size: 2em;
+    margin-bottom: 0px;
+}
+
+.item3 {
+    margin: auto 15%;
+    color: ghostwhite;
+    font-family: 'montserrat';
+}
+
+.fa-arrow-right {
+    padding-left: 25%;
+}
+
+#skill-icon {
+    padding-left: 50%;
+}
+
+.skill {
+    margin: auto 0px;
+}
+
+/*********************************************************************************************
+                                    WORK SECTION
+**********************************************************************************************/
+
+.work_bg {
+    background-color: black;
+    position: relative;
+}
+
+.work-grid {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding-top: 110px;
+    padding-bottom: 100px;
+    margin: 0px 20px 0px 10px;
+    column-gap: 10px;
+    text-align: center;
+}
+
+.work-img {
+    height: 60vh;
+    width: 100%;
+}
+
+.work-title {
+    color: darkgray;
+    font-family: 'ubuntu';
+    text-align: center;
+    padding-top: 8%;
+}
+
+.work-paragraph {
+    left: 31%;
+    position: absolute;
+    top: 8%;
+    color: ghostwhite;
+    font-size: 1.4em;
+    font-family: 'pt serif';
+    font-weight: 700;
+}
+.work-button{
+    font-size: 2em;
+    font-family: 'ubuntu', 'sans-serif';
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+    color: ghostwhite;
+    background-color: black;
+    border: #545454 0.125em solid;
+    padding: 10%;
+    border-radius: 0.3em;
+    /* text-shadow: 1px 1px 2px; */
+    box-shadow: 5px 8px 5px 3px #545454;
+    position: relative;
+}
+/*********************************************************************************************
+                                    CONTACT SECTION
+**********************************************************************************************/
+.contact_bg {
+    background-image: url('/images/contact_bg2.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 768px;
+    position: relative;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding-top: 7%;
+}
+
+.contact-col {
+    padding-top: 5%;
+    padding-left: 5%;
+}
+
+.contact-img {
+    margin: auto;
+    color: #545454;
+}
+
+.contact-img i {
+    transition: width 2s, height 2s, transform 2s;
+}
+
+.contact-img i:hover {
+    width: 300px;
+    height: 300px;
+    transform: rotate(360deg);
+}
+
+.contact-msg {
+    font-family: 'ubuntu', 'sans-serif';
+    padding-bottom: 2%;
+    color: black;
+}
+
+.input-col {
+    border-radius: 20px;
+    border: transparent;
+    height: 50px;
+    font-family: 'ubuntu', 'sans-serif';
+    background-color: #cce7f8;
+    width: 94%;
+    margin-bottom: 30px;
+}
+
+.input-colomn {
+    border-radius: 20px;
+    border: transparent;
+    height: 110px;
+    background-color: #cce7f8;
+    font-family: 'ubuntu', 'sans-serif';
+    width: 94%;
+    margin-bottom: 30px;
+}
+
+.contact-button {
+    border-radius: 20px;
+    height: 50px;
+}
+
+::placeholder {
+    font-family: 'ubuntu', 'sans-serif';
+}
+
+/*********************************************************************************************
+                                        FOOTER SECTION
+**********************************************************************************************/
+
+.footer_bg {
+    background-color: #9dc6db;
+}
+
+.footer-socials {
+    text-align: center;
+    padding-top: 3%;
+}
+
+.footer-paragraph {
+    padding-top: 20px;
+    margin-bottom: 0px;
+    font-family: 'montserrat';
+}
+
+.socials-button {
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    margin: 5px 15px;
+    overflow: hidden;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 10px 10px 8px 3px rgb(0 0 0 / 10%);
+    transition: all 0.3s ease-out;
+}
+
+.social-icon {
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    border-radius: 50px;
+    line-height: 60px;
+    transition: all 0.3s ease-out;
+}
+
+.social-icon i {
+    font-size: 30px;
+    line-height: 50px;
+    transition: all 0.3s ease-out;
+    color: black;
+}
+
+/********************************************************************************************
+ media query for laptop size design to tablet size design
+*********************************************************************************************/
+
+@media all and (max-width: 1200px) {
+    .about-story {
+        width: 71%;
+        line-height: 2.1;
+    }
+
+    .fa-arrow-right {
+        padding-left: 20%;
+    }
+}
+
+@media all and (max-width: 1151px) {
+    .home-button {
+        top: 80%;
+    }
+
+    .wrapper {
+        top: 41%;
+    }
+}
+
+@media all and (max-width: 1000px) {
+    /* .about-grid {
+        padding-top: 9%;
+    } */
+
+    .about-story {
+        width: 80%;
+    }
+
+    /* .work-grid {
+        padding-top: 13%;
+    } */
+
+    .contact-grid {
+        padding-top: 10%;
+    }
+}
+
+@media all and (max-width: 943px) {
+    .home-heading {
+        left: 10%;
+    }
+
+    .home-essay {
+        left: 10%;
+        width: 70%;
+    }
+
+    .home-button {
+        left: 10%;
+    }
+}
+
+@media all and (max-width: 900px) {
+    /* .about-grid {
+        padding-top: 10%;
+    } */
+
+    .about-story {
+        width: 90%;
+    }
+}
+
+@media all and (max-width: 1066px) {
+    .fa-arrow-right {
+        padding-left: 13%;
+    }
+
+    #skill-icon {
+        padding-left: 48%;
+    }
+
+    /* .skills-grid {
+        padding-top: 12%;
+    } */
+}
+
+@media all and (max-width: 975px) {
+    .fa-arrow-right {
+        padding-left: 5%;
+    }
+
+    #skill-icon {
+        padding-left: 43%;
+    }
+    .work-button{
+        font-size: 2em;
+    }
+}
+
+@media all and (max-width: 880px) {
+    #skill-icon1 {
+        display: none;
+    }
+
+    #skill-icon2 {
+        display: none;
+    }
+
+    #skill-icon {
+        display: none;
+    }
+
+    .home-heading {
+        top: 32%;
+    }
+
+    .home-essay {
+        top: 37%;
+    }
+
+    .home-button {
+        top: 79%;
+    }
+
+    .wrapper {
+        top: 38%;
+    }
+}
+
+/********************************************************************************************
+ media query for tablet size design to phone size design
+*********************************************************************************************/
+
+@media all and (max-width: 769px) {
+    .home-heading {
+        top: 29%;
+        left: 2%;
+    }
+
+    .home-essay {
+        top: 34%;
+        width: 97%;
+        left: 2%;
+    }
+
+    .home-button {
+        top: 68%;
+        left: 2%;
+    }
+
+    .wrapper {
+        display: none;
+    }
+
+    nav #brand {
+        padding-left: 0px;
+    }
+
+    .about-story {
+        width: 95%;
+        line-height: 1.9;
+        letter-spacing: 0.01em;
+    }
+
+    .about-img {
+        margin: 20px auto;
+    }
+
+    .about-gtid {
+        padding-top: 12%;
+    }
+
+    .skills-grid {
+        /* padding-top: 16%; */
+        row-gap: 55px;
+    }
+
+    .skill {
+        margin: auto 20px;
+    }
+
+    .work-grid {
+        /* padding-top: 18%; */
+        grid-template-columns: 100%;
+        row-gap: 70px;
+    }
+
+    .section-heading {
+        left: 41%;
+    }
+
+    /* .work-title {
+        display: none;
+    } */
+
+    .contact-grid {
+        padding-top: 14%;
+        grid-template-columns: 100%;
+    }
+
+    .contact_bg {
+        background-image: url('/images/contact_bg\ for\ tablet.png');
+        height: 725px;
+    }
+
+    .contact-img {
+        display: none;
+    }
+
+    .footer-copy {
+        left: 34%;
+    }
+
+    .item1 {
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+
+    .skill {
+        grid-column-start: 2;
+        grid-column-end: 4;
+    }
+
+    .item3 {
+        grid-column-start: 2;
+        grid-column-end: 4;
+    }
+
+    .item3 {
+        font-size: 1.1em;
+    }
+
+}
+
+@media all and (max-width: 660px) {
+    #about-bg {
+        background-image: none;
+        background-color: #9dc6db;
+        position: relative;
+    }
+
+    .about-grid {
+        grid-template-columns: 100%;
+        /* padding-top: 14%; */
+    }
+
+    .about-portrait {
+        height: 50vh;
+    }
+
+    .home-essay {
+        font-size: 2.4em;
+    }
+
+    .home-btn {
+        margin-right: 20px;
+    }
+
+    .about-img {
+        display: none;
+    }
+}
+
+@media all and (max-width: 600px) {
+    /* .about-grid {
+        padding-top: 14%;
+    } */
+
+    .section-heading {
+        top: 2%;
+    }
+
+    /* .skills-grid {
+        padding-top: 21%;
+    } */
+/* 
+    .work-grid {
+        padding-top: 21%;
+    } */
+
+    .contact-grid {
+        padding-top: 19%;
+    }
+
+    .footer-copy {
+        left: 30%;
+    }
+
+    .home-heading {
+        top: 34%;
+    }
+
+    .home-essay {
+        top: 40%;
+        font-size: 2.2em;
+    }
+
+    .home-button {
+        top: 72%;
+    }
+
+    .home_bg {
+        height: 700px;
+    }
+
+    .about-story {
+        line-height: 2.2;
+    }
+}
+
+@media all and (max-width: 534px) {
+    .home-heading {
+        top: 30%;
+    }
+
+    .home-essay {
+        top: 36%;
+    }
+
+    .home-button {
+        top: 76%;
+    }
+    .work-button{
+        font-size: 1.7em;
+    }
+}
+
+@media all and (max-width: 441px) {
+    .home_bg {
+        background-image: url('/images/home_bg-for-mobile-view.png');
+    }
+
+    .home-heading {
+        top: 33%;
+        font-size: 1.6em;
+    }
+
+    .home-essay {
+        top: 38%;
+        font-size: 1.9em
+    }
+
+    .home-button {
+        top: 74%;
+    }
+
+    /* .about-grid {
+        padding-top: 18%;
+    } */
+
+    .section-heading {
+        top: 1%;
+        left: 36%;
+    }
+
+    .skill {
+        margin-left: 35px;
+    }
+
+    .item2 {
+        font-size: 1.7em;
+    }
+
+    /* .skills-grid {
+        padding-top: 25%;
+    } */
+
+    /* .work-grid {
+        padding-top: 25%;
+    } */
+
+    .contact_bg {
+        height: 660px;
+    }
+
+    .footer-copy {
+        left: 24%;
+    }
+}
+
+@media all and (max-width: 389px) {
+    .home-heading {
+        top: 29%;
+        font-size: 1.4em;
+    }
+
+    .home-essay {
+        top: 34%;
+        font-size: 1.7em;
+    }
+
+    .home-button {
+        top: 67%;
+    }
+
+    .home-btn {
+        width: 226px;
+        margin-bottom: 10px;
+    }
+
+    .home-btn2 {
+        width: 226px;
+    }
+}
