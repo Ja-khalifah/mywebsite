@@ -8,10 +8,10 @@ app.use(bodyParser.urlencoded({
 }))
 app.use(express.static(__dirname + '/public'))
 
-mongoose.connect('mongodb+srv://admin-abdulqadir:todolist123@todolist.ipnkg.mongodb.net/mywebsiteDB', {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-})
+// mongoose.connect('mongodb+srv://admin-abdulqadir:todolist123@todolist.ipnkg.mongodb.net/mywebsiteDB', {
+//     useNewUrlParser: true,
+//     useUnifiedTopology: true
+// })
 mongoose.connection.once('open', function (err) {
     if (err) {
         console.log(err)
