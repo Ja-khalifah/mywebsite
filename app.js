@@ -61,7 +61,7 @@ app.post('/', function (req, res) {
         }else{
             setTimeout(function(){
                 res.redirect('/#contact' )
-            }, 1000)
+            }, 500)
         }
     })
 })
