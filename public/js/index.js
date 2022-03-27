@@ -14,7 +14,3 @@ $('#toggle').click(function(){
     $('#resize').toggleClass('active')
 })
 
-// toggle.onclick = function(){
-//     toggle.classList.toggle('on');
-//     resize.classList.toggle('active');
-// }
